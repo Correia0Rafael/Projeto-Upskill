@@ -6,6 +6,11 @@ body {
   overflow-x: hidden;
 }
 
+.video {
+	width: 70%;
+	height: 70%;
+}
+
 .layout_padding {
   padding: 90px 0;
 }
