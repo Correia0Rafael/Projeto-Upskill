@@ -4,10 +4,12 @@ body {
   color: #0c0c0c;
   background-color: #ffffff;
   overflow-x: hidden;
+  width: 100vw; /* Make sure body is 100 view width always */
+  min-height: 100vh; /* Make sure, the height is at least 100 view height */
 }
 
 .layout_padding {
-  padding: 90px 0;
+  padding: 20px 0;
 }
 
 .layout_padding2 {
@@ -111,11 +113,24 @@ a:focus {
 }
 
 .bg-boc {
-	position: absolute;
-	top: 0;
-	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.45);
+	z-index: 10;
+}
+.bg-boc .video-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.bg-boc .video-container video {
 	width: 70%;
-	height: 70%;
+	height: auto;
 }
 
 .bg-box img {
@@ -211,6 +226,65 @@ a:focus {
 
 .user_option a {
   margin: 0 10px;
+  position: relative;
+}
+
+/* Edit Garrret 04/08/2022 10:25 */
+.user_option .expander {
+	background: none;
+	text-decoration: none;
+	border: none;
+}
+
+/* pop-up, initialy it is hidden with display: none */
+.user_option .pop-up {
+	position: absolute;
+	display: none;
+	right: 0;
+	top: 50px;
+	border: none !important;
+	z-index: 10;
+	border-radius: 1rem;
+}
+
+/* pop-up, when javascript appends activeclass, will show the element changing display: inline */
+.user_option .active {
+	padding: 0.5rem;
+	min-width: 18.5vw;
+	min-height: 100px;
+	background-color: gray;
+	display: inline;
+}
+
+.user_option .pop-up #cart-total {
+	text-align: right;
+	padding: 0.5rem 0;
+}
+
+/*  */
+.user_option .pop-up .cart-item {
+	padding: 0.25rem;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	border-radius: 0.5rem;
+}
+
+.user_option .pop-up .cart-item:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.user_option .pop-up .cart-item .cart-item-element {
+	font-size: 15px;
+}
+
+.user_option .pop-up div button {
+	border: none;
+	border-radius: 0.75rem;
+	width: 100%;
+}
+.user_option .pop-up div button:hover {
+	background-color: rgba(0, 0, 0, 0.45);
 }
 
 .user_option .user_link {
@@ -569,9 +643,10 @@ a:focus {
 		  justify-content: space-between;
 }
 
-.food_section .box .options a {
+.food_section .box .options a, .food_section .box .options button {
   width: 40px;
   height: 40px;
+  border: none;
   border-radius: 100%;
   background: #27c4bc;
   display: -webkit-box;
@@ -585,7 +660,7 @@ a:focus {
           align-items: center;
 }
 
-.food_section .box .options a svg {
+.food_section .box .options a svg, .food_section .box .options button svg {
   width: 18px;
   height: auto;
   fill: #ffffff;
@@ -641,6 +716,7 @@ a:focus {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
 
 .about_section .img-box img {
   width: 100%;

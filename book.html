@@ -29,7 +29,8 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-
+  <!-- Custom JS by pulgamecanica -->
+  <script src="js/style.js"></script>
 </head>
 
 <body class="sub_page">
@@ -67,11 +68,11 @@
                 <a class="nav-link" href="book.html">Contactos<span class="sr-only">(current)</span> </a>
               </li>
             </ul>
-            <div class="user_option">
-              <a href="" class="user_link">
+            <div class="user_option" id="user-options-container">
+              <button href="" class="user_link expander">
                 <i class="fa fa-user" aria-hidden="true"></i>
-              </a>
-              <a class="cart_link" href="#">
+			  </button>
+              <button class="cart_link expander" href="#">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                   <g>
                     <g>
@@ -124,7 +125,7 @@
                   <g>
                   </g>
                 </svg>
-              </a>
+			  </button>
               <form class="form-inline">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                   <i class="fa fa-search" aria-hidden="true"></i>

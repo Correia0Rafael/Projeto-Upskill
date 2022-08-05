@@ -29,7 +29,8 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-
+  <!-- Custom JS by pulgamecanica -->
+  <script src="js/style.js"></script>
 </head>
 
 <body class="sub_page">
@@ -67,11 +68,11 @@
                 <a class="nav-link" href="book.html">Contactos</a>
               </li>
             </ul>
-            <div class="user_option">
-              <a href="" class="user_link">
+            <div class="user_option" id="user-options-container">
+              <button href="" class="user_link expander">
                 <i class="fa fa-user" aria-hidden="true"></i>
-              </a>
-              <a class="cart_link" href="#">
+			  </button>
+              <button class="cart_link expander" href="#">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                   <g>
                     <g>
@@ -124,7 +125,7 @@
                   <g>
                   </g>
                 </svg>
-              </a>
+			  </button>
               <form class="form-inline">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                   <i class="fa fa-search" aria-hidden="true"></i>
@@ -167,7 +168,7 @@
                 <div class="img-box">
                   <img src="images/museuartepopular.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items">
                   <h5>
                     Museu de Arte Popular
                   </h5>
@@ -178,7 +179,7 @@
                     <h6>
                       $20
                     </h6>
-                    <a href="">
+                    <button>
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                         <g>
                           <g>
@@ -231,7 +232,7 @@
                         <g>
                         </g>
                       </svg>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -243,7 +244,7 @@
                 <div class="img-box">
                   <img src="images/coches.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items">
                   <h5>
                     Museu dos Coches
                   </h5>
@@ -254,7 +255,7 @@
                     <h6>
                       $15
                     </h6>
-                    <a href="">
+                    <button>
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                         <g>
                           <g>
@@ -307,7 +308,7 @@
                         <g>
                         </g>
                       </svg>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -319,7 +320,7 @@
                 <div class="img-box">
                   <img src="images/gulbenkian.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items product-items">
                   <h5>
                     Gulbenkian
                   </h5>
@@ -397,7 +398,7 @@
                 <div class="img-box">
                   <img src="images/belemvolta.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items product-items">
                   <h5>
                     Volta de bicicleta Belém
                   </h5>
@@ -473,7 +474,7 @@
                 <div class="img-box">
                   <img src="images/passadiços.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items product-items">
                   <h5>
                     Passadiços de Paiva
                   </h5>
@@ -549,7 +550,7 @@
                 <div class="img-box">
                   <img src="images/praia-fluvial-de-poco-corga.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items product-items">
                   <h5>
                     Praia fluvial Poço de Corga
                   </h5>
@@ -627,7 +628,7 @@
                 <div class="img-box">
                   <img src="images/vascodagama.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items product-items">
                   <h5>
                     Aquário Vasco da Gama
                   </h5>
@@ -703,7 +704,7 @@
                 <div class="img-box">
                   <img src="images/monsaraz.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items product-items">
                   <h5>
                     Castelo de Monsaraz
                   </h5>
@@ -779,7 +780,7 @@
                 <div class="img-box">
                   <img src="images/berlengas.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items product-items">
                   <h5>
                     Reserva Natural Berlengas
                   </h5>
@@ -857,7 +858,7 @@
                 <div class="img-box">
                   <img src="images/douro.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items">
                   <h5>
                     Cruzeiros do Douro
                   </h5>
@@ -933,7 +934,7 @@
                 <div class="img-box">
                   <img src="images/palaciodapena.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items">
                   <h5>
                     Palácio da Pena
                   </h5>
@@ -1009,7 +1010,7 @@
                 <div class="img-box">
                   <img src="images/xisto.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items">
                   <h5>
                     Aldeias de Xisto
                   </h5>
@@ -1087,7 +1088,7 @@
                 <div class="img-box">
                   <img src="images/milreu.webp" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items">
                   <h5>
                     Ruínas de Milreu
                   </h5>
@@ -1163,9 +1164,9 @@
                 <div class="img-box">
                   <img src="images/poçodosduques.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items">
                   <h5>
-                    Poço dos Duques
+                    Paço dos Duques de Bragança
                   </h5>
                   <p>
                     Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque
@@ -1239,7 +1240,7 @@
                 <div class="img-box">
                   <img src="images/assunçao.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items">
                   <h5>
                     Convento Nossa Sra. Assunção
                   </h5>
@@ -1317,7 +1318,7 @@
                 <div class="img-box">
                   <img src="images/sedebraga.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items">
                   <h5>
                     Sé de Braga
                   </h5>
@@ -1393,7 +1394,7 @@
                 <div class="img-box">
                   <img src="images/malhadinha.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items">
                   <h5>
                     Herdade Malhadinha Nova
                   </h5>
@@ -1469,7 +1470,7 @@
                 <div class="img-box">
                   <img src="images/grutadoescoural.jpeg" alt="">
                 </div>
-                <div class="detail-box">
+                <div class="detail-box product-items">
                   <h5>
                     Gruta de Escoural
                   </h5>
