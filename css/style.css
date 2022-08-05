@@ -8,6 +8,11 @@ body {
   min-height: 100vh; /* Make sure, the height is at least 100 view height */
 }
 
+.video {
+	width: 70%;
+	height: 70%;
+}
+
 .layout_padding {
   padding: 20px 0;
 }
