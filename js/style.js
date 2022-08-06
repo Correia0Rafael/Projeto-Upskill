@@ -1,7 +1,7 @@
 let elems = '{ "items" : [' +
-'{ "title":"Gulbenkian" , "price":"$17" },' +
-'{ "title":"Castelo de Monsaraz" , "price":"$14" },' +
-'{ "title":"Palacio da Pena" , "price":"$14" } ]}';
+'{ "title":"Gulbenkian" , "price":"€17" },' +
+'{ "title":"Castelo de Monsaraz" , "price":"€14" },' +
+'{ "title":"Palacio da Pena" , "price":"€14" } ]}';
 
 let collection = JSON.parse(elems);
 //alert(collection.items);
@@ -86,7 +86,7 @@ function add_expander(elem) {
 		let total = document.createElement('div');
 		let total_result = document.createElement('span');
 		total.setAttribute("id", "cart-total");
-		total.innerHTML = "<span>Total: $</span>";
+		total.innerHTML = "<span>Total: €</span>";
 		total_result.setAttribute("id", "cart-total-result");
 		total.appendChild(total_result);
 		pop_up.appendChild(total);
