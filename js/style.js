@@ -1,7 +1,7 @@
 let elems = '{ "items" : [' +
-'{ "title":"Gulbenkian" , "price":"€17" },' +
-'{ "title":"Castelo de Monsaraz" , "price":"€14" },' +
-'{ "title":"Palacio da Pena" , "price":"€14" } ]}';
+'{ "title":"Gulbenkian" , "price":"€18" },' +
+'{ "title":"Castelo de Monsaraz" , "price":"€18" },' +
+'{ "title":"Palacio da Pena" , "price":"€12" } ]}';
 
 let collection = JSON.parse(elems);
 //alert(collection.items);
@@ -23,7 +23,7 @@ function expand(elem, pop_up) {
 function get_cart_total() {
 	let total = document.getElementById('cart-total-result');
 	let result = 0;
-	/* Algoritmo de soma do produtos */
+	/* Algorithm to sum all products */
 	let cart_elems = document.getElementById('cart-container').children;
 	for (let index = 0; index < cart_elems.length; index++) {
 		if (cart_elems[index].classList.contains('cart-item')) {
@@ -66,11 +66,12 @@ function remove_from_cart(obj) {
 	cart.removeChild(obj);
 	get_cart_total();
 }
-//Carrinho
+
 function add_expander(elem) {
 	let pop_up = document.createElement('div');
 	pop_up.classList.add('pop-up');
 	if (elem.classList.contains('user_link')) {
+		// por auth no azure
 		pop_up.innerHTML = " \
 			<form action=\"https://microsoft_azure/code/auth\" method=\"post\"> \
 				<input type=\"text\" placeholder=\"Enter Username\" name=\"uname\" required> \
@@ -97,7 +98,7 @@ function add_expander(elem) {
 		expand(elem, pop_up)
 	});
 }
-//Adicionar produto ao carrinho
+
 function add_product_to_cart(elem) {
 	let title = String(elem.children[0].innerHTML.trim());
 	let price = String(elem.children[2].children[0].innerHTML.trim());
